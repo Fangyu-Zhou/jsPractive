@@ -2,3 +2,4 @@
 2. practice FETCH so that make get() function in service and DOM operatios in Controller.
 3. closure practice
 4. prototype practice.
+5. use async function and await to implement promise recursive;
