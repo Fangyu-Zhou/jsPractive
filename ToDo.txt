@@ -1,2 +1,4 @@
 1. in ArrowFunction.js write all the situations about THIS to see the result
 2. practice FETCH so that make get() function in service and DOM operatios in Controller.
+3. closure practice
+4. prototype practice.
