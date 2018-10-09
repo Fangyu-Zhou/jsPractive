@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>idnex</title>
+    <link rel="stylesheet" href="css/m.css">
+</head>
+<body>
+    <h1>Change side</h1>
+    <table>
+        <th>List1</th><th>List2</th>
+        <tr>
+            <td>
+                <ul id="list1" style="list-style: none">
+                    <li>A</li>
+                    <li>B</li>
+                    <li>C</li>
+                </ul>
+            </td>
+            <!-- <td style="width: 50px">
+                <button>>></button>
+                <br>
+                <br>
+                <button><<</button>
+            </td> -->
+            <td>
+                <ul id="list2" style="list-style: none">
+                    <li>D</li>
+                    <li>E</li>
+                    <li>F</li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+    <br>
+    <table style="width: 300px">
+        <th>List1</th><th></th><th>List2</th>
+        <tr>
+            <td>
+                <select style="width: 70px" multiple="multiple" name="" id="box1">
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="C">C</option>
+                </select>
+            </td>
+            <td>
+                <button id="right-btn" onclick="move('box1', 'box2')">>></button>
+                <br>
+                <br>
+                <button id="left-btn" onclick="move('box2', 'box1')"><<</button>
+            </td>
+            <td >
+                <select style="width: 70px" multiple="multiple" name="" id="box2">
+                    <option value="D">D</option>
+                    <option value="E">E</option>
+                    <option value="A">A</option>
+                </select>
+            </td>
+        </tr>
+    </table>
+
+    <h1>Promise chain</h1>
+    <p id="content"></p>
+    <button id="toDoList" onclick="toDo()">display in 2 sec</button>
+    <br>
+    <br>
+
+    <h1>replace string</h1>
+    <div>
+        <textarea name="" id="t1" cols="20" rows="1"></textarea>
+        <textarea name="" id="t2" cols="20" rows="1"></textarea>
+        <button onclick="replace()" style="position:relative; bottom: 6px" id="replace">try it</button>
+    </div>
+    <p id="replaceResult"></p>
+    
+    
+    <br>
+
+    <h1>count forever</h1>
+    <p id="count">0</p>
+    <button id="count-btn" onclick="startCount()">start counting</button>
+    <button id="stopCount-btn" onclick="stopCount()">Stop</button>
+
+    <br>
+    <h1>Fetch data</h1>
+    <table id="tb">
+        <!-- <tr>
+            <th>id</th><th>title</th>
+        </tr> -->
+    </table>
+
+   
+
+    <!-- <script src="scripts/tablemove.js"></script> -->
+    <script src="scripts/tablemove2.js"></script>
+    <script src="scripts/promis.js"></script>
+    <script src="scripts/fetch.js"></script>
+    <script src="scripts/stringPractice.js"></script>
+    <script src="scripts/countForever.js"></script>
+    <script src="scripts/newTableMove.js"></script>
+    <script>
+        // function show() {
+        //     let s1 = document.getElementById("t1").value;
+        //     console.log(s1);
+        // }
+        
+    </script>
+    
+</body>
+</html>
