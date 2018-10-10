@@ -13,4 +13,6 @@ async function show() {
 }
 
 
-show();
+console.log(show().then(function() {
+    console.log("resolved!")
+}));

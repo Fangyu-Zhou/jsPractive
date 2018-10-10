@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        .title{
+            width: 80%;
+            margin: 0px 200px;
+            border: 1px solid gray;
+            padding: 10px;
+        }
+
+        .text{
+            width: 80%;
+            margin: 0px 200px;
+            margin-bottom: 10px;
+            border: 1px solid blue;
+            padding: 10px;
+            background-color: teal;
+            display: none;
+        }
+    </style>
+    <script src="scripts/jquery.js"></script>
+</head>
+<body>
+    <div class="container">
+        <button class="btn">click Me</button>
+    </div>
+
+    <div class="content"></div>
+    
+    
+
+    <script>
+        $(document).ready(function() {
+            $('button').on('click', (event) => {
+                let newBtn = $(event.currentTarget).clone(true);
+                console.log(newBtn);
+                $(event.currentTarget).after(newBtn)
+            })
+
+            $.ajax({
+                url: 'https://jsonplaceholder.typicode.com/posts',
+                method: 'GET',
+                success: function(data) {
+                    // for (let i = 0; i < data.length; i ++) {
+                    //     let newDiv = "<div class='title'>" + data[i].title + "</div>";
+                    //     $('.content').append(newDiv);
+                    //     let newText = "<div class='text'>" + data[i].body + "</div>";
+                    //     $('.content').append(newText);
+                        
+                    // }
+                    $.each(data, function(index, value) {
+                        let newDiv = "<div class='title'>" + value.title + "</div>";
+                        $('.content').append(newDiv);
+                        let newText = "<div class='text'>" + value.body + "</div>";
+                        $('.content').append(newText);
+                    })
+
+                    $('.title').on('click', (event) => {
+                        $(event.currentTarget).next().fadeToggle();
+                    })
+                }
+            })
+
+        }) 
+    </script>
+</body>
+</html>
