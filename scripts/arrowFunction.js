@@ -36,9 +36,10 @@ let b = {
 
  let d = {
      fun: function(cb) { // cb is a arrow function
-        cb();
+        cb(); //window
      }
  }
+
 
  
 
